@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/utils/color_manager.dart';
 import 'package:payment_app/core/utils/strings_manager.dart';
@@ -128,7 +130,7 @@ class RegisterPage extends StatelessWidget {
                       ),
                       function: () {
                         if (formKey.currentState!.validate()) {
-                          print("No Data");
+                          // print("No Data");
                         }
                       },
                     ),
