@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/utils/strings_manager.dart';
 
-import '../../features/auth/presentation/pages/register_page.dart';
+import '../../features/payment/presentation/pages/ref_code_page.dart';
+import '../../features/payment/presentation/pages/register_page.dart';
+import '../../features/payment/presentation/pages/toggle_page.dart';
+import '../../features/payment/presentation/pages/visa_page.dart';
 
 class Routes {
   static const String registerRoute = '/';
+  static const String toggleRoute = '/toggle';
+  static const String referenceRoute = '/reference';
+  static const String visaRoute = '/visa';
+  
 }
 
 class RouteGenerator {
@@ -12,9 +19,20 @@ class RouteGenerator {
     switch (settings.name) {
       case Routes.registerRoute:
         return routeBuilder(
-           RegisterPage(),
+          RegisterPage(),
         );
-
+      case Routes.toggleRoute:
+        return routeBuilder(
+          const TogglePage(),
+        );
+      case Routes.referenceRoute:
+        return routeBuilder(
+          const ReferencePage(),
+        );
+      case Routes.visaRoute:
+        return routeBuilder(
+          const VisaPage(),
+        );
       default:
         return unDefinedRoute();
     }
